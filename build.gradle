@@ -34,5 +34,5 @@ tasks.named('test') {
 }
 
 jar{
-    archiveName 'greetings.jar'
+    archiveName 'spring-boot-docker.jar'
 }
