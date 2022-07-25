@@ -14,7 +14,7 @@ RUN ./gradlew build -x test
 RUN java -Djarmode=layertools -jar build/libs/spring-boot-docker-0.0.1.jar extract --destination extracted/
 # don't forget to add into build.gradle
 # jar {
-#    archiveName 'greetings.jar'
+#    archiveName 'spring-boot-docker.jar'
 #    }
 
 FROM openjdk:11.0.15-jre-slim-buster
