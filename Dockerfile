@@ -1,4 +1,4 @@
-FROM openjdk:11.0.14.1-oraclelinux8
+FROM openjdk:11.0.15-oraclelinux8
 
 USER root
 
