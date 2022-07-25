@@ -4,4 +4,5 @@ docker build -f local.Dockerfile -t stols/spring-boot-docker --progress=plain --
 if [ $? != 0 ] ; then # [ $? != 0 ] - means that previous command isn't successful
     exit 1 # General errors
 fi
-docker run -d -p 8080:8080 stols/spring-boot-docker
+docker tag stols/spring-boot-docker sergeystol/spring-boot-docker
+docker push sergeystol/spring-boot-docker

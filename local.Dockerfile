@@ -1,4 +1,4 @@
-FROM openjdk:11.0.14.1-oraclelinux8 as build
+FROM openjdk:11.0.15-oraclelinux8 as build
 
 USER root
 
@@ -17,7 +17,8 @@ RUN java -Djarmode=layertools -jar build/libs/spring-boot-docker-0.0.1.jar extra
 #    archiveName 'greetings.jar'
 #    }
 
-FROM openjdk:11.0.14.1-jre-buster
+FROM openjdk:11.0.15-jre-slim-buster
+
 WORKDIR application
 ARG EXTRACTED=/workspace/app/extracted
 COPY --from=build ${EXTRACTED}/dependencies/ ./
